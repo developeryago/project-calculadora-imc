@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <script src="scripts/calc.js"></script>
+</head>
+<body>
+    <section>
+        <form action="" method="post" autocomplete="on">
+            <h1>Calculadora de IMC</h1>
+            <h2>(Índice de Massa Corpórea)</h2>
+
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+
+                <label for="name">Nome: <input type="text" name="name" id="nome" autocomplete="name" required></label><br>
+
+                <label for="idade">Idade: <input type="number" name="idade" id="idade" autocomplete="age" required></label><br>
+
+                <p>Sexo:  
+                    <label for="masc">Masculino<input type="radio" name="sex" id="masc" checked></label>
+                    <label for="fem">Feminino<input type="radio" name="sex" id="fem"></label>
+                </p>
+
+            <fieldset>
+                <legend>Informações Corpóreas</legend>
+
+                <label for="peso">Peso: <input type="number" name="peso" id="peso"></label required> <br>
+
+                <label for="altura">Altura: <input type="number" name="altura" id="altura" required ></label><br>
+
+            </fieldset>
+            </fieldset>
+            <button type="submit" onclick="calc()">Calcular</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </section>
+    <div id="resp"></div>
+</body>
+</html>
