@@ -51,3 +51,10 @@ function calc(){
         alert('Verifique os dados e tente novamente!')
     }
 }
+
+function limpar(){
+    var resp = document.getElementById("resp")
+    resp.innerHTML = ''
+    var nome = document.getElementById("nome")
+    nome.focus()
+}
