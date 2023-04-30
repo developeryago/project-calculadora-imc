@@ -1,32 +1,39 @@
-var nome = document.querySelector('input#name')
-var idade = document.querySelector('input#idade')
-var peso = document.querySelector('input#peso')
-var altura = document.querySelector('input#altura')
-var resp = document.getElementById('resp')
-var id = Number(nome)
-var alt = Number(altura)
-var pes = Number(peso)
 
 function verifidade(n){
-    if (Number(n) >= 0 && Number(n) <= 100){
+    if (Number(n) > 0 && Number(n) <= 100){
         return true
     } else{
         return false
     }
 }
 
-function verfpeso(p){
-    if (Number(p) <= 0 && Number(p) > 120){
-        return false
-    } else{
+function verifpeso(p){
+   if (Number(p) >= 5 && Number(p) <=130){
         return true
-    }
+   } else{
+        return false
+   }
 }
 
 function calc(){
-    if (verifidade(nome)){
-        alert('Tudo OK!')
+    var nome = document.getElementById("nome").value
+    var idade = document.getElementById("idade").value
+    var peso = document.getElementById("peso").value
+    var altura = document.querySelector('input#altura').value
+    var conta = peso / (altura ** 2)
+    var resp = document.getElementById("resp")
+
+    if (verifidade(idade) && verifpeso(peso)){
+        console.log(conta)
+        resp.innerHTML = `Olá ${nome}, de acordo com o cálculo do seu IMC você apresenta: <br> <br>`
+        if (conta < 17){
+            resp.innerHTML += `MAGRAZA GRAVE !<br> Você está muito abaixo do peso correndo assim, risco a insuficiência cardíaca, anemia grave e enfraquecimento do sistema imunológico. `
+        } /*else if (conta <= 18,5 && conta >= 17){
+            resp.innerHTML += `MAGREZA LEVE ! <br> Você está abaixo do peso e pode apresentar problemas de saúde ligados a desnutrição.`
+        } */else if (conta > 18,5 && conta < 24,9){
+            resp.innerHTML += `PESO NORMAL ! <br> Parabéns, segundo a ciência você é Eutrófico, ou seja, saudável.`
+        }
     } else{
-        alert('Deu B.O!')
+        alert('Verifique os dados e tente novamente!')
     }
 }

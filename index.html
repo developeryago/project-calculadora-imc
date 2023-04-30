@@ -18,9 +18,9 @@
             <fieldset>
                 <legend>Informações Pessoais</legend>
 
-                <label for="name">Nome: <input type="text" name="name" id="nome" class="box" autocomplete="name" required></label><br>
+                <label for="name">Nome: <input  id="nome" type="text" name="name" class="box" autocomplete="name" required></label><br>
 
-                <label for="idade">Idade: <input type="number" name="idade" id="idade" autocomplete="age" class="box" required></label><br>
+                <label for="idade">Idade: <input id="idade" type="number" name="idade"  autocomplete="age" class="box" required></label><br>
 
                 <p>Sexo:  
                     <label for="masc">Masculino<input type="radio" name="sex" id="masc" checked></label>
@@ -30,17 +30,16 @@
             <fieldset>
                 <legend>Informações Corpóreas</legend>
 
-                <label for="peso">Peso: <input type="number" name="peso" id="peso" class="box" required></label> <br>
+                <label for="peso">Peso: <input type="number" name="peso" id="peso" class="box" placeholder="em (kg)" required></label> <br>
 
-                <label for="altura">Altura: <input type="number" name="altura" id="altura" class="box" required ></label><br>
+                <label for="altura">Altura: <input type="number" name="altura" id="altura" class="box" placeholder="em (cm)" required ></label><br>
 
             </fieldset>
             </fieldset>
-            <button type="submit" onclick="calc()">Calcular</button>
+            <button onclick="calc()">Calcular</button>
             <button type="reset">Limpar</button>
+            <p id="resp"></p>
         </form>
-    </section>
-    <div id="resp"></div>
     <script src="scripts/calc.js"></script>
 </body>
 </html>
