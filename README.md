@@ -5,8 +5,6 @@
 <a href="https://developeryago.github.io/project-calculadora-imc/">Link do Projeto</a> 
 <br>
 <br>
-<img src="img/mobile.png" alt="versão mobile">
-<img src="img/tablet.png" alt="versão tablet">
-<img src="img/desktop.png" alt="versão desktop">
+
 
 
