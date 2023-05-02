@@ -24,7 +24,6 @@ function calc(){
     var resp = document.getElementById("resp")
 
     if (verifidade(idade) && verifpeso(peso)){
-        console.log(conta)
         resp.innerHTML = `Olá ${nome}, de acordo com o cálculo do seu IMC você apresenta: <br> <br>`
         if (conta < 17){
             resp.innerHTML += `MAGRAZA GRAVE !<br> Você está muito abaixo do peso correndo assim, risco a insuficiência cardíaca, anemia grave e enfraquecimento do sistema imunológico. `
